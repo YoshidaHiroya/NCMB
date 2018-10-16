@@ -24,6 +24,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZKC-t7-zre">
                                 <rect key="frame" x="42" y="110" width="291" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.86224661347342968" blue="0.2977912927519647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -36,6 +37,15 @@
                                 <state key="normal" title="保存"/>
                                 <connections>
                                     <action selector="save" destination="BYZ-38-t0r" eventType="touchUpInside" id="Doi-UH-wce"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTG-GV-HEy">
+                                <rect key="frame" x="99" y="276" width="199" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.58837547513908151" blue="0.30156204845681067" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="読み込み"/>
+                                <connections>
+                                    <action selector="loadData" destination="BYZ-38-t0r" eventType="touchUpInside" id="lYD-dM-dVN"/>
                                 </connections>
                             </button>
                         </subviews>

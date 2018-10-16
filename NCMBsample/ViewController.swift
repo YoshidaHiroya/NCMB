@@ -32,5 +32,22 @@ class ViewController: UIViewController {
         })
     }
     
+    
+    @IBAction func loadData(){
+        let query=NCMBQuery(className:"message")
+        query?.findObjectsInBackground({ (result, error) in
+            if error != nil{
+                print("error")
+            } else {
+                
+                print(result)
+            }
+            let messages = result as![NCMBObject]
+            let text = messages.last?.object(forKey:"text")as!String
+            self.sampleTextFiled.text=text
+        })
+    }
+    
+    
 }
 
