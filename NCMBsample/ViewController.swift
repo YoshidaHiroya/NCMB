@@ -7,9 +7,9 @@
 //
 
 import UIKit
-
+import NCMB
 class ViewController: UIViewController {
-
+    @IBOutlet var sampleTextFiled : UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +20,17 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func save(){
+        let Object=NCMBObject(className:"message")
+        Object?.setObject( sampleTextFiled.text, forKey: "text")
+        Object?.saveInBackground({ (error) in
+            if error != nil{
+                print("error")
+            }else{
+                print("success")
+            }
+        })
+    }
+    
 }
 
