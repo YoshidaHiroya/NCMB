@@ -6,5 +6,5 @@ target 'NCMBsample' do
   use_frameworks!
 
   # Pods for NCMBsample
- pod 'NCMB', :git => 'https://github.com/NIFCloud-mbaas/ncmb_ios.git'
+ pod 'NCMB', :git => 'https://github.com/NIFCloud-mbaas/ncmb_ios.git’
 end

@@ -47,7 +47,28 @@ class ViewController: UIViewController {
             self.sampleTextFiled.text=text
         })
     }
-    
+    @IBAction func update(){
+        let query = NCMBQuery(className:"message")
+        query?.whereKey("text", equalTo:"あいうえお" )
+        query?.findObjectsInBackground({ (result, error) in
+            if error != nil{
+                print(error)
+            }else{
+                let messages=result as![NCMBObject]
+                let textObject=messages.first
+                textObject?.setObject("こんばんは", forKey: "text")
+                textObject?.saveInBackground({ (error) in
+                    if error != nil {
+                    print(error)
+                    }else{
+                        print("update succeed")
+                    }
+                })
+            }
+            
+            
+        } )
+}
     
 }
 
